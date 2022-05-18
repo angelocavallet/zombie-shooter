@@ -1,0 +1,15 @@
+{
+	"name": "vidaJogador",
+	"plugin-id": "Text",
+	"sid": 551100817785058,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Anchor",
+			"name": "Âncora",
+			"sid": 286056007108312
+		}
+	],
+	"effectTypes": []
+}

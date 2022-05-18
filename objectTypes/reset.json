@@ -1,0 +1,14 @@
+{
+	"name": "Reset",
+	"plugin-id": "Button",
+	"sid": 161314424792461,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Anchor",
+			"name": "Âncora",
+			"sid": 994411733384755
+		}
+	]
+}

@@ -1,0 +1,70 @@
+{
+	"name": "Bala",
+	"plugin-id": "Sprite",
+	"sid": 502206253078081,
+	"isGlobal": true,
+	"instanceVariables": [
+		{
+			"name": "Velocidade",
+			"type": "number",
+			"desc": "",
+			"sid": 363183139575502
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 311189073890490
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 184,
+						"height": 184,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5366281,
+						"collisionPoly": {
+							"points": [
+								0.5,
+								0.5859375,
+								0.416015625,
+								0.5859375,
+								0.001953125,
+								0.5,
+								0.416015625,
+								0.416015625,
+								0.5,
+								0.416015625,
+								0.57421875,
+								0.427734375,
+								0.998046875,
+								0.5,
+								0.57421875,
+								0.57421875
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 812001668586099,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

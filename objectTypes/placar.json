@@ -1,0 +1,22 @@
+{
+	"name": "Placar",
+	"plugin-id": "Text",
+	"sid": 667886227913358,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "placar",
+			"type": "number",
+			"desc": "",
+			"sid": 932278775937845
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Anchor",
+			"name": "Anchor",
+			"sid": 498200891520813
+		}
+	],
+	"effectTypes": []
+}

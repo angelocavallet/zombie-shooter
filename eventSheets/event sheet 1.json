@@ -1,0 +1,761 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "placar_var",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 193142604131091
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 228108600574030
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle-toward-position",
+					"objectClass": "Jogador",
+					"sid": 692731021077100,
+					"parameters": {
+						"x": "Mouse.X",
+						"y": "Mouse.Y"
+					}
+				},
+				{
+					"id": "set-angle-toward-position",
+					"objectClass": "Zumbi",
+					"sid": 556872966349616,
+					"parameters": {
+						"x": "Jogador.X",
+						"y": "Jogador.Y"
+					}
+				},
+				{
+					"id": "move-forward",
+					"objectClass": "Zumbi",
+					"sid": 698029583468000,
+					"parameters": {
+						"distance": "1"
+					}
+				}
+			],
+			"sid": 512788754710872
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 813096708394623,
+					"parameters": {
+						"interval-seconds": "4"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "RespNorte",
+					"sid": 551636117387741,
+					"parameters": {
+						"object": "Zumbi",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Zumbi",
+					"sid": 968617887664232,
+					"parameters": {
+						"instance-variable": "vida",
+						"value": "100"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Zumbi",
+					"sid": 524959452102938,
+					"parameters": {
+						"instance-variable": "dano",
+						"value": "10"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "RespNorte",
+					"sid": 871615854991990,
+					"parameters": {
+						"x": "random(0, LayoutWidth)"
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "RespSul",
+					"sid": 883273991134755,
+					"parameters": {
+						"object": "Zumbi",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Zumbi",
+					"sid": 937041862571855,
+					"parameters": {
+						"instance-variable": "vida",
+						"value": "100"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Zumbi",
+					"sid": 824266654045097,
+					"parameters": {
+						"instance-variable": "dano",
+						"value": "10"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "RespSul",
+					"sid": 413110320247166,
+					"parameters": {
+						"x": "random(0, LayoutWidth)"
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "RespOeste",
+					"sid": 711723269225147,
+					"parameters": {
+						"object": "Zumbi",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Zumbi",
+					"sid": 640966213648134,
+					"parameters": {
+						"instance-variable": "vida",
+						"value": "100"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Zumbi",
+					"sid": 910714043563058,
+					"parameters": {
+						"instance-variable": "dano",
+						"value": "10"
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "RespLeste",
+					"sid": 574494804960361,
+					"parameters": {
+						"object": "Zumbi",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Zumbi",
+					"sid": 266868004574558,
+					"parameters": {
+						"instance-variable": "vida",
+						"value": "100"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Zumbi",
+					"sid": 655522057005151,
+					"parameters": {
+						"instance-variable": "dano",
+						"value": "10"
+					}
+				},
+				{
+					"type": "script",
+					"script": "runtime.objects.RespOeste.getFirstInstance().y = Math.floor(Math.random() * runtime.layout.height)\nruntime.objects.RespLeste.getFirstInstance().y = Math.floor(Math.random() * runtime.layout.height)"
+				}
+			],
+			"sid": 471291700262261
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 991680260276623,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Jogador",
+					"sid": 554383467372489,
+					"parameters": {
+						"object": "Bala",
+						"layer": "0",
+						"image-point": "1",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-size",
+					"objectClass": "Bala",
+					"sid": 827116874018354,
+					"parameters": {
+						"width": "40",
+						"height": "40"
+					}
+				},
+				{
+					"id": "set-speed",
+					"objectClass": "Bala",
+					"sid": 295639794779721,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"speed": "1300"
+					}
+				},
+				{
+					"id": "set-angle-of-motion",
+					"objectClass": "Bala",
+					"sid": 134201659844633,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"angle": "Jogador.Angle"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Áudio",
+					"sid": 350644563341452,
+					"parameters": {
+						"audio-file": "308-Bolt-Action-Rifle-Single-Close-Gunshot-B",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"fire\""
+					}
+				}
+			],
+			"sid": 466168811394573
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Bala",
+					"sid": 368518314559339,
+					"parameters": {
+						"object": "Zumbi"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Bala",
+					"sid": 319920791623638
+				},
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "Zumbi",
+					"sid": 434114776081940,
+					"parameters": {
+						"instance-variable": "vida",
+						"value": "Jogador.dano"
+					}
+				},
+				{
+					"id": "move-forward",
+					"objectClass": "Zumbi",
+					"sid": 491203755460372,
+					"parameters": {
+						"distance": "-20"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Áudio",
+					"sid": 365591948114247,
+					"parameters": {
+						"audio-file": "ES_Bullet Impact Flesh 8",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"zombiehit\""
+					}
+				}
+			],
+			"sid": 490224910205978,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Zumbi",
+							"sid": 905359928382215,
+							"parameters": {
+								"instance-variable": "vida",
+								"comparison": 3,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Zumbi",
+							"sid": 191935675915419
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 720623961865504,
+							"parameters": {
+								"variable": "placar_var",
+								"value": "1"
+							}
+						},
+						{
+							"id": "stop",
+							"objectClass": "Áudio",
+							"sid": 758817686292561,
+							"parameters": {
+								"tag": "\"Zombie\"&Zumbi.UID"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Placar",
+							"sid": 905060179710950,
+							"parameters": {
+								"text": "placar_var"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Áudio",
+							"sid": 310079770472745,
+							"parameters": {
+								"audio-file": "zombie-male-death",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"zombiedeath\""
+							}
+						}
+					],
+					"sid": 171363562854929
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Zumbi",
+					"sid": 751295087908458,
+					"parameters": {
+						"object": "Jogador"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "Jogador",
+					"sid": 667673759083957,
+					"parameters": {
+						"instance-variable": "vida",
+						"value": "Zumbi.dano"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "vidaJogador",
+					"sid": 827859791006397,
+					"parameters": {
+						"text": "Jogador.vida"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Áudio",
+					"sid": 874061786590132,
+					"parameters": {
+						"audio-file": "ES_Zombie Creature Bite",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"zombiebite\""
+					}
+				}
+			],
+			"sid": 946326174160405,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Jogador",
+							"sid": 448604890811796,
+							"parameters": {
+								"instance-variable": "vida",
+								"comparison": 3,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Jogador",
+							"sid": 153622557659302
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "game_over",
+							"sid": 995427736042966,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Reset",
+							"sid": 987216475156937,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "stop",
+							"objectClass": "Áudio",
+							"sid": 157466978722536,
+							"parameters": {
+								"tag": "\"steps\""
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Áudio",
+							"sid": 648239881743032,
+							"parameters": {
+								"audio-file": "ES_Scream Male 31",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"jogadordeath\""
+							}
+						}
+					],
+					"sid": 851050930677270
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Teclado",
+					"sid": 877929665122129,
+					"parameters": {
+						"key": 87
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "Jogador",
+					"sid": 943189172460248,
+					"behaviorType": "8Direction",
+					"parameters": {
+						"control": "up"
+					}
+				}
+			],
+			"sid": 600708134312851
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Teclado",
+					"sid": 139938955121336,
+					"parameters": {
+						"key": 83
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "Jogador",
+					"sid": 509961447581070,
+					"behaviorType": "8Direction",
+					"parameters": {
+						"control": "down"
+					}
+				}
+			],
+			"sid": 321129856945705
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Teclado",
+					"sid": 179990625023001,
+					"parameters": {
+						"key": 65
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "Jogador",
+					"sid": 592500794451810,
+					"behaviorType": "8Direction",
+					"parameters": {
+						"control": "left"
+					}
+				}
+			],
+			"sid": 202084438806350
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Teclado",
+					"sid": 649072913368019,
+					"parameters": {
+						"key": 68
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "Jogador",
+					"sid": 525313091186819,
+					"behaviorType": "8Direction",
+					"parameters": {
+						"control": "right"
+					}
+				}
+			],
+			"sid": 874029630506371
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "Reset",
+					"sid": 147117228408055
+				}
+			],
+			"actions": [
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 198574880865571
+				}
+			],
+			"sid": 350119962420534
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 348835343149466
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Áudio",
+					"sid": 776070661869451,
+					"parameters": {
+						"audio-file": "Fantasy Ambience David Fesliyan",
+						"loop": "looping",
+						"volume": "-15",
+						"tag-optional": "\"bg\""
+					}
+				},
+				{
+					"id": "set-listener-object",
+					"objectClass": "Áudio",
+					"sid": 278225848654344,
+					"parameters": {
+						"object": "Jogador"
+					}
+				}
+			],
+			"sid": 851210697839518
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-moving",
+					"objectClass": "Jogador",
+					"sid": 865832654676807,
+					"behaviorType": "8Direction"
+				},
+				{
+					"id": "is-tag-playing",
+					"objectClass": "Áudio",
+					"sid": 338351327059833,
+					"parameters": {
+						"tag": "\"steps\""
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Áudio",
+					"sid": 961523192403661,
+					"parameters": {
+						"audio-file": "Footsteps-in-grass-slow-B",
+						"loop": "not-looping",
+						"volume": "-10",
+						"tag-optional": "\"steps\""
+					}
+				}
+			],
+			"sid": 513485968337411
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-moving",
+					"objectClass": "Jogador",
+					"sid": 114970584261572,
+					"behaviorType": "8Direction",
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "stop",
+					"objectClass": "Áudio",
+					"sid": 540734243853235,
+					"parameters": {
+						"tag": "\"steps\""
+					}
+				}
+			],
+			"sid": 962798500919941
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-screen",
+					"objectClass": "Zumbi",
+					"sid": 599969285655553
+				},
+				{
+					"id": "is-tag-playing",
+					"objectClass": "Áudio",
+					"sid": 118086028010290,
+					"parameters": {
+						"tag": "\"Zombie\"&Zumbi.UID"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "play-at-object",
+					"objectClass": "Áudio",
+					"sid": 376442134138843,
+					"parameters": {
+						"audio-file": "Zombie-Growl-A2",
+						"loop": "looping",
+						"volume": "-20",
+						"object": "Zumbi",
+						"inner-angle": "360",
+						"outer-angle": "360",
+						"outer-gain": "0",
+						"tag-optional": "\"Zombie\"&Zumbi.UID"
+					}
+				}
+			],
+			"sid": 225431490911349
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-screen",
+					"objectClass": "Zumbi",
+					"sid": 814998572323235,
+					"isInverted": true
+				},
+				{
+					"id": "is-tag-playing",
+					"objectClass": "Áudio",
+					"sid": 910428048780903,
+					"parameters": {
+						"tag": "\"Zombie\"&Zumbi.UID"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "stop",
+					"objectClass": "Áudio",
+					"sid": 336466236066008,
+					"parameters": {
+						"tag": "\"Zombie\"&Zumbi.UID"
+					}
+				}
+			],
+			"sid": 810541103914197
+		}
+	],
+	"sid": 751243361197275
+}
